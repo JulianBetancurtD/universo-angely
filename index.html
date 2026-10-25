@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090b20">
+    <meta name="description" content="Un pequeño universo creado especialmente para Angely.">
+    <title>Para Angely ✦</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <header class="topbar">
+        <a href="#inicio" class="brand">A <span>✦</span></a>
+        <button id="soundToggle" class="sound-btn" type="button" aria-label="Activar o desactivar efectos de sonido">
+            ♪ <span id="soundLabel">Sonido: apagado</span>
+        </button>
+    </header>
+
+    <main>
+        <!-- PORTADA -->
+        <section class="hero" id="inicio">
+            <div class="orb orb-one"></div>
+            <div class="orb orb-two"></div>
+
+            <p class="eyebrow">AM0R DE MI VIDA</p>
+            <h1>Para <span class="gradient-text">Angely</span></h1>
+            <p class="hero-copy">
+                Una pequeña parte de mi conociemiento dedicada a ti.
+            </p>
+
+            <button class="primary-btn" id="beginBtn" type="button">
+                Descubre tu sorpresa <span>↗</span>
+            </button>
+            <p class="micro-copy">Hecho con código y mucho amor.</p>
+            <div class="scroll-hint">Hay algo más abajo <span>↓</span></div>
+        </section>
+
+        <!-- MENSAJE PRINCIPAL -->
+        <section class="section intro-section" id="mensaje">
+            <div class="section-tag">01 — UN PEQUEÑO DETALLE</div>
+            <h2>No es una página cualquiera.</h2>
+            <div class="glass-card">
+                <span class="card-star">✧</span>
+                <p>
+                    Queria practicar un poco, y como no hacerlo dedicando un poco de tiempo en este pequeño proyecto en
+                    el cual quiero hacer que pienses que a pesar de la carga que manejo siempre a cada instante pienso
+                    en ti mi amor.
+                </p>
+                <span class="signature">— El amor de tu vida</span>
+            </div>
+        </section>
+
+        <!-- FLOR -->
+        <section class="section flower-section" id="flor">
+            <div class="section-tag">02 — ALGO QUE FLORECE</div>
+            <h2>Una flor para ti.</h2>
+            <p class="body-copy">
+                Toca el botón y mira lo que hice.
+            </p>
+
+            <div class="flower-stage" id="flowerStage">
+                <div class="flower" id="flower" aria-label="Flor animada">
+                    <div class="petal petal-1"></div>
+                    <div class="petal petal-2"></div>
+                    <div class="petal petal-3"></div>
+                    <div class="petal petal-4"></div>
+                    <div class="petal petal-5"></div>
+                    <div class="petal petal-6"></div>
+                    <div class="flower-center"></div>
+                    <div class="stem"></div>
+                    <div class="leaf leaf-left"></div>
+                    <div class="leaf leaf-right"></div>
+                </div>
+            </div>
+
+            <button class="secondary-btn" id="bloomBtn" type="button">
+                Haz florecer la sorpresa ✿
+            </button>
+            <p id="flowerMessage" class="reveal-message" aria-live="polite"></p>
+        </section>
+
+        <!-- CARTA -->
+        <section class="section letter-section" id="carta">
+            <div class="section-tag">03 — ALGO QUE QUIERO DECIRTE</div>
+            <h2>Hay una carta para ti.</h2>
+            <p class="body-copy">
+                No necesitas una llave. Solo un pequeño toque.
+            </p>
+
+            <button class="envelope" id="letterBtn" type="button" aria-expanded="false" aria-controls="letterContent">
+                <span class="envelope-flap"></span>
+                <span class="envelope-heart">♥</span>
+                <span class="envelope-label">Para Angely</span>
+                <span class="envelope-hint">Pulsa para abrir</span>
+            </button>
+
+            <article class="letter-paper" id="letterContent" hidden>
+                <p class="letter-date">UNA NOTA PARA TI ✦</p>
+                <h3>Angely,</h3>
+                <p>
+                    Quería regalarte algo distinto, algo que cualquiera no haria por ti y tampoco sabria hacerlo. Es
+                    algo para agradecer todo lo que haces por mi, como una manera de agradecerlo, se que no es mucho
+                    pero mi intención es hacerlo con mucho amor.
+                </p>
+                <p>
+                    Puede que todavía esté aprendiendo muchas cosas,
+                    pero hay algo bonito en dedicar tiempo a crear algo
+                    pensando en ti.
+                </p>
+                <p>
+                    Gracias por formar parte de mi vida. Espero que este
+                    pequeño detalle te recuerde que te mereces todo lo lindo y todo el amor de este mundo
+                </p>
+                <p class="letter-custom">
+                    Y si tuviera que resumir todo esto, sería:
+                    <strong>me alegra que seas parte de mi y de mi vida.</strong>
+                </p>
+                <p class="letter-signature">Con mucho mucho amor, para ti. ♥</p>
+            </article>
+        </section>
+
+        <!-- ESTRELLAS CON MENSAJES -->
+        <section class="section constellation-section" id="estrellas">
+            <div class="section-tag">04 — PEQUEÑAS COSAS QUE QUIERO QUE SEPAS</div>
+            <h2>Encuentra tus estrellas.</h2>
+            <p class="body-copy">
+                Cada estrella guarda un mensaje. Toca las que quieras descubrir.
+            </p>
+
+            <div class="star-map" id="starMap">
+                <button class="secret-star star-a" type="button"
+                    data-message="Tu sonrisa me acelera el corazon y me alegra el dia."
+                    aria-label="Descubrir mensaje de la estrella uno">✦</button>
+                <button class="secret-star star-b" type="button"
+                    data-message="No tienes que ser perfecta para ser alguien maravillosamente increible."
+                    aria-label="Descubrir mensaje de la estrella dos">✦</button>
+                <button class="secret-star star-c" type="button"
+                    data-message="Me encanta saber que cada dia fomentamos mas nuestro amor, que cada dia nos conocemos mucho mejor y nos damos mas amor."
+                    aria-label="Descubrir mensaje de la estrella tres">✦</button>
+                <button class="secret-star star-d" type="button" data-message="Ojalá nunca me vuelvas a faltar mi vida."
+                    aria-label="Descubrir mensaje de la estrella cuatro">✦</button>
+                <button class="secret-star star-e" type="button"
+                    data-message="Esta pequeña página tiene muchos detalles, pero ninguno sera igual de importante como lo eres tu para mi."
+                    aria-label="Descubrir mensaje de la estrella cinco">✦</button>
+                <span class="constellation-line line-a"></span>
+                <span class="constellation-line line-b"></span>
+                <span class="constellation-line line-c"></span>
+                <span class="constellation-line line-d"></span>
+            </div>
+
+            <div class="message-box" id="starMessage" aria-live="polite">
+                <span class="message-icon">✧</span>
+                <p>Tu siguiente sorpresa está escrita en las estrellas.</p>
+            </div>
+            <p class="discovery-count" id="discoveryCount">0 de 5 estrellas descubiertas</p>
+        </section>
+
+        <!-- FINAL -->
+        <section class="final-section" id="final">
+            <div class="final-sparkle">✧</div>
+            <p class="eyebrow">ANTES DE QUE TE VAYAS...</p>
+            <h2>Este pequeño universo<br>tiene algo que decirte.</h2>
+            <p class="body-copy">
+                No importa cuántas líneas de código tenga algo.
+                A veces, lo más bonito es la intención que hay detrás.
+            </p>
+            <button class="primary-btn" id="finalBtn" type="button">
+                Una última sorpresa ♥
+            </button>
+            <p id="finalMessage" class="final-message" aria-live="polite" hidden>
+                No quiero que dudes mas de nuestro amor, se que hemos pasado por momentos muy complicados
+                pero todo lo dejamos en mano de Dios, para que nuestro constante cambio nos de los frutos del amor
+                que siempre hemos querido cosechar. No dudes de ti ni de mi, se que estamos haciendo las cosas mejor que
+                nunca, te adoro amor de mi vida. ♥
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <span>Hecho especialmente para Angely</span>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
